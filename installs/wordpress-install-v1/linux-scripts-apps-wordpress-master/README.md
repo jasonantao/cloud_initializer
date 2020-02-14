@@ -6,7 +6,6 @@ Find your way using our directory below:
 
 - [Legal Disclaimer & Copyright Agreement ©](#copyright-agreement)
 - [Repository](#repository-information)
-- [Installation Documentation](#installation-details)
 - [Package Contents](#package-contents)
 - [Running the Package](#running-the-package)
 - [Video Tutorial](#video-tutorial)
@@ -43,16 +42,8 @@ Read all copyright clauses and information before continuing to download and/or 
 - Description: webBootstrap.sh is a  bootstrap utility for downloading and installing .... XXXXXXXXX.sh may be installed as a bootstrap or after the Linux system has been launched. 
 - The webBootstrap.sh is used to download ??????? from the git repository for ...
  - - - -
-### Installation Details<img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/installation.png" width="7%" align= "right">
-- Please Note: For a comprehensive demonstration of the installation process, refer to the 'Video Tutorial' section below.
-- Execute the webBootstrap.sh*, upon installation of a new Linux installation as a bootstrap or as a stand alone bash script. If executing the script manually on a Linux O.S. after downloading from the git repository, be sure to:
-  - execute as root ./webBootstrap.sh
-  - or as user with sudo access sudo ./webBootstrap.sh
-- *Notes: 
-    - All script installation packages are installed under /tmp/scripts/???/???/??? directory and may be analyzed in that directory.
-    - You may modify the script installation file (webBootstrap.sh) to change the directory package installation location.
-    - Upon Completion of installation, the installation directory and all contents may be removed.
- - - - -
+
+
 ### Package Contents<img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/contents.png" width="6%" align= "right">
 
 - README.md ~ Readme file
