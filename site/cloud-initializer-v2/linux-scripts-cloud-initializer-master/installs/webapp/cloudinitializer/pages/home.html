@@ -1,0 +1,57 @@
+		<h1>Home</h1>
+		<p>WELCOME HOME</p>
+
+		<script>
+			function initAPI_Test() {
+				var app = "postman_TEST";
+				setIdMapPropertyValue(app, "buttonTitle", "Postman Test");
+				setIdMapPropertyValue(app, "fgColor", "Brown");
+				setIdMapPropertyValue(app, "bgColor", "lightGrey");
+				setIdMapPropertyValue(app, "titleColor", "black");
+				setIdMapPropertyValue(app, "Title", "CLOUD Initializer API test");
+				setIdMapPropertyValue(app, "Method", "Get");
+				setIdMapPropertyValue(app, "URL", getURL("system?cmd=ls -l"));
+				setIdMapPropertyValue(app, "LeftColButton", "gui");	
+			}
+		
+			initAPI_Test();
+		</script>
+		<!--
+		 /////// CUSTOM PROPERTIES METHODS
+		
+		/*
+		*id="postmanTitle"
+		*id="restMethod"
+		*id="urlTextBox"
+		id="urlBtn"
+		id="send"
+		id="tableData"
+		   id="gui"
+		   id="parms"
+		   id="body"
+		   id="resp"
+		   id="log"
+		*id="rightColHeader"
+		id="leftCol"
+		   id="gui_Left_Div"
+		   id="parms_Left_Div"
+		   id="body_Left_Div"
+		   id="resp_Left_Div"
+		   id="log_Left_Div"
+		id="rightCol"
+		   id="gui_Right_Div"
+		   id="parms_Right_Div"
+		   id="body_Right_Div"
+		   id="resp_Right_Div"
+		   id="log_Right_Div"
+		   */
+		 -->
+		
+		<table id="blogsTable" class="installTable">
+			<tr>
+				<td>
+					<button id="test_BTN" class="install_BTN_postman"
+						onclick="paintPostmanButtonSelection(this)">API TEST</button>
+				</td>
+			</tr>
+		</table>

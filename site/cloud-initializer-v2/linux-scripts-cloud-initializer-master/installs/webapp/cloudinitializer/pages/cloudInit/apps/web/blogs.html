@@ -1,0 +1,27 @@
+<script>
+    function initWP() {
+//        alert("EXECUTING initWP()");
+        var app = "postman_WP";
+        var url= "install/wordpress?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&dbName=/test";
+        var appURL=getURL(url);
+        setIdMapPropertyValue(app, "buttonTitle", "Postman WP");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "lightGrey");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer Wordpress Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", appURL);
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    initWP();
+</script>
+
+<table id="blogsTable" class="installTable">
+    <tr>
+        <td>
+            <button id="wp_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Wordpress</button>
+        </td>
+    </tr>
+</table>

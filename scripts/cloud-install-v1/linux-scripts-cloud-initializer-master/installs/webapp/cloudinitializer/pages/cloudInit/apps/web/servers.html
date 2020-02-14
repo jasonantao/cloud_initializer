@@ -1,0 +1,41 @@
+<script>
+    function initHTTP() {
+        var app = "postman_HTTP";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman HTTP");
+        setIdMapPropertyValue(app, "fgColor", "white");
+        setIdMapPropertyValue(app, "bgColor", "darkGrey");
+        setIdMapPropertyValue(app, "titleColor", "cyan");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer HTTP Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/http?port=9120&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    function initJBOSS() {
+        var app = "postman_JBOSS";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman JBOSS");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "lightGrey");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer jBoss Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/jBoss?port=9130&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+     }
+
+    initHTTP();
+    initJBOSS();
+</script>
+
+<table id="serversTable" class = "installTable">
+    <tr>
+        <td>
+            <button id="http_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">HTTP</button>
+        </td>
+        <td>
+            <button id="jBoss_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">jBoss</button>
+        </td>
+    </tr>
+</table>

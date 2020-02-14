@@ -1,0 +1,99 @@
+<script>
+   function initDocker() {
+       var app = "postman_DOCKER";
+       setIdMapPropertyValue(app, "buttonTitle", "Postman Docker");
+       setIdMapPropertyValue(app, "fgColor", "darkGrey");
+       setIdMapPropertyValue(app, "bgColor", "lightGrey");
+       setIdMapPropertyValue(app, "titleColor", "Orange");
+       setIdMapPropertyValue(app, "Title", "CLOUD Initializer Docker Installer");
+       setIdMapPropertyValue(app, "Method", "Get");
+       setIdMapPropertyValue(app, "URL", getURL("install/docker?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+       setIdMapPropertyValue(app, "LeftColButton", "gui");
+   }
+
+   function initJenkins() {
+       var app = "postman_JENKINS";
+       setIdMapPropertyValue(app, "buttonTitle", "Postman Jenkins");
+       setIdMapPropertyValue(app, "fgColor", "darkGrey");
+       setIdMapPropertyValue(app, "bgColor", "majenta");
+       setIdMapPropertyValue(app, "titleColor", "Orange");
+       setIdMapPropertyValue(app, "Title", "CLOUD Initializer Docker Installer");
+       setIdMapPropertyValue(app, "Method", "Get");
+       setIdMapPropertyValue(app, "URL", getURL("install/jenkins?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+       setIdMapPropertyValue(app, "LeftColButton", "gui");
+   }
+
+   function initGit() {
+       var app = "postman_GIT";
+       setIdMapPropertyValue(app, "buttonTitle", "Postman Git");
+       setIdMapPropertyValue(app, "fgColor", "white");
+       setIdMapPropertyValue(app, "bgColor", "black");
+       setIdMapPropertyValue(app, "titleColor", "red");
+       setIdMapPropertyValue(app, "Title", "CLOUD Initializer Git Installer");
+       setIdMapPropertyValue(app, "Method", "Get");
+       setIdMapPropertyValue(app, "URL", getURL("install/git?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+       setIdMapPropertyValue(app, "LeftColButton", "gui");
+   }
+
+   function initLinuxAdmin() {
+       var app = "postman_ADMIN";
+       setIdMapPropertyValue(app, "buttonTitle", "Postman Linux");
+       setIdMapPropertyValue(app, "fgColor", "darkGrey");
+       setIdMapPropertyValue(app, "bgColor", "majenta");
+       setIdMapPropertyValue(app, "titleColor", "Orange");
+       setIdMapPropertyValue(app, "Title", "CLOUD Initializer Linux Installer");
+       setIdMapPropertyValue(app, "Method", "Get");
+       setIdMapPropertyValue(app, "URL", getURL("install/linuxAdmin?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+       setIdMapPropertyValue(app, "LeftColButton", "gui");
+   }
+
+   function initAwsStorageS3sF() {
+       var app = "postman_STORAGE";
+       setIdMapPropertyValue(app, "buttonTitle", "Postman S3SF");
+       setIdMapPropertyValue(app, "fgColor", "white");
+       setIdMapPropertyValue(app, "bgColor", "black");
+       setIdMapPropertyValue(app, "titleColor", "red");
+       setIdMapPropertyValue(app, "Title", "CLOUD Initializer Storage Installer");
+       setIdMapPropertyValue(app, "Method", "Get");
+       setIdMapPropertyValue(app, "URL", getURL("install/s3sf?BucketName=MyBucket&adminId=MyId&adminPWD=password&installDir=/var"));
+       setIdMapPropertyValue(app, "LeftColButton", "gui");
+   }
+
+   initDocker();
+   initGit();
+   initJenkins();
+   initLinuxAdmin();
+   initAwsStorageS3sF();
+</script>
+
+<table id="devOpsTable" class = "installTable">
+    <tr>
+        <td>
+            <button id="docker_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Docker</button>
+        </td>
+        <td>
+            <button id="git_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Git</button>
+        </td>
+        <td>
+            <button id="jenkins_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Jenkins</button>
+        </td>
+        <td>
+            <button id="linuxAdmin_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Linux
+                Admin</button>
+        </td>
+        <td>
+            <button id="storage_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Storage</button>
+        </td>
+    </tr>
+</table>
+<div id="linuxAdmin_Div" class="checkBoxes">
+    <script> $("#linuxAdmin_Div").load("./pages/cloudInit/devOps/linuxAdmin.html"); </script>
+</div>
+<div id="storage_Div" class="checkBoxes">
+    <script> $("#storage_Div").load("./pages/cloudInit/devOps/storage.html"); </script>
+</div>

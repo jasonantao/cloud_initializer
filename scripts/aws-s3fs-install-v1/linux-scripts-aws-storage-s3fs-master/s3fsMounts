@@ -1,0 +1,2 @@
+service s3fs mount ec2-s3fs /s3fs
+service s3fs mount remcogold /remcogold

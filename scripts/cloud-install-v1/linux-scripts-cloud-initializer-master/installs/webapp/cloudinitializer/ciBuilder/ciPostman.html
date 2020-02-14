@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="./lib/css/ciBuilder.css">
+
+  <!-- jQuery first, then Bootstrap JS. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  <script src="./lib/js/ajaxRestCalls.js"></script>
+  <script src="./lib/js/properties.js"></script>
+  <script src="./lib/js/ciPostman.js"></script>
+</head>
+
+<!-- <body onload="initPostmanDefaults('test')"> -->
+
+<body onload="initPostmanDefaults('resp')">
+  <div id="Body" class="Top">
+    <div>
+      <H1 id="postmanTitle">CLOUD initializer POSTMAN</H1>
+    </div>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td class="padding5px" style="width: 1px;">
+              <select id="restMethod" class="class_urlBarElement" onchange="buildURL()">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
+              </select>
+            </td>
+            <td class="padding5px">
+              <input type="text" id="urlTextBox" class="class_urlBarElement" name="urlTextBox" style="width:100%"
+                value="UNDEFINED URL">
+            </td>
+            <td class="padding5px" style="width: 1px;">
+              <button id="urlBtn" class="class_urlBarElement" onclick="prepRestApi('urlTextBox','restMethod','resp')"
+                id="send" class="active">Send</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table id="tableData" class="fixed">
+        <tbody>
+          <tr>
+            <td>
+              <table class="fixed" vertical-align: top; border: 1px solid black;>
+                <tbody>
+                  <tr class="dataBar">
+                    <td class="padding5px">
+                      <button id="gui" class="class_leftColElement" onclick="setActiveDiv(this)"
+                        class="active">GUI</button>
+                      <button id="parms" class="class_leftColElement" onclick="setActiveDiv(this)"
+                        class="active">Parms</button>
+                      <button id="body" class="class_leftColElement" onclick="setActiveDiv(this)"
+                        class="active">Body</button>
+                      <button id="resp" class="class_leftColElement" onclick="setActiveDiv(this)"
+                        class="active">Response</button>
+                      <button id="log" class="class_leftColElement" onclick="setActiveDiv(this)"
+                        class="active">Log</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td>
+              <table class="fixed">
+                <tbody>
+                  <tr class="dataBar">
+                    <td class="padding5px">
+                      <H2 id="rightColHeader">Response</H2>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="Container">
+    <!------- LEFT PANEL------->
+    <div id="leftCol" class="scrolable">
+      <div id="gui_Left_Div" class="container_Div" contenteditable="true">
+        {Page:To Do Left Gui}</div>
+      <div id="parms_Left_Div" class="container_Div">
+        {Page:To Do Left Parms}</div>
+      <div id="body_Left_Div" class="container_Div">
+        {Page:To Do Left Body}</div>
+      <div id="resp_Left_Div" class="container_Div">
+        {Page:To Do Left Response}</div>
+      <div id="log_Left_Div" class="container_Div">
+        {Page:To Do Left Log}</div>
+    </div>
+    <!------- RIGHT PANEL------->
+    <div id="rightCol" class="scrolable">
+      <div id="gui_Right_Div" class="container_Div">
+        {Page:To Do Right Gui}</div>
+      <div id="parms_Right_Div" class="container_Div">
+        {Page:To Do Right Parms}</div>
+      <div id="body_Right_Div" class="container_Div">
+        {Page:To Do Right Body}</div>
+      <div id="resp_Right_Div" class="container_Div">
+        {Page:To Do Right Response}</div>
+      <div id="log_Right_Div" class="container_Div">
+        {Page:To Do Right Log}</div>
+    </div>
+  </div>
+
+  <script>
+    function initPostmanDefaults(apiReq) {
+      var cmd="system?cmd=ls -l"
+      var url=getURL(cmd);
+      var page="TEST";
+      var app = "postman_"+page;
+      var elmnt = document.getElementById(apiReq);
+      setIdMapPropertyValue(app, "URL", url);
+      var url_ELMNT = document.getElementById("urlTextBox");
+      url_ELMNT.value = url;
+      setActiveDiv(elmnt);
+    }
+  </script>
+</body>
+
+</html>

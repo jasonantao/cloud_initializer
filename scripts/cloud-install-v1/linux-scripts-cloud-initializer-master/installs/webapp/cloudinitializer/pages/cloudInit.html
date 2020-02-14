@@ -1,0 +1,33 @@
+<script>
+	//	Used For Debugging Only
+	var loc = window.location.pathname;
+	var dir = loc.substring(0, loc.lastIndexOf('/'))
+//	alert("dir = "+dir);
+</script>
+
+<h1>WELCOME TO CLOUD initializer</h1>
+
+<input type="checkbox" id="applications" onclick="checkBoxDivToggle(this)">Applications<BR>
+<div id="applications_Div" class="checkBoxes">
+	<script> $("#applications_Div").load("./pages/cloudInit/apps.html"); </script>
+</div>
+
+<input type="checkbox" id="dB" onclick="checkBoxDivToggle(this)">Database<BR>
+<div id="dB_Div" class="checkBoxes">
+	<script> $("#dB_Div").load("./pages/cloudInit/db.html"); </script>
+</div>
+
+<input type="checkbox" id="dev" onclick="checkBoxDivToggle(this)">Development<BR>
+<div id="dev_Div" class="checkBoxes">
+	<script> $("#dev_Div").load("./pages/cloudInit/dev.html"); </script>
+</div>
+
+<input type="checkbox" id="devOps" onclick="checkBoxDivToggle(this)">DevOps<BR>
+<div id="devOps_Div" class="checkBoxes">
+	<script> $("#devOps_Div").load("./pages/cloudInit/devOps.html"); </script>
+</div>
+
+<input type="checkbox" id="utilities" onclick="checkBoxDivToggle(this)">Utilities<BR>
+<div id="utilities_Div" class="checkBoxes">
+	<script> $("#utilities_Div").load("./pages/cloudInit/utils.html"); </script>
+</div>

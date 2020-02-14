@@ -1,0 +1,26 @@
+<!-- <input type="checkbox" id="utils" class="postman" onclick="paintPostmanButtonSelection(this)">Utilities<BR> -->
+
+<script>
+    function utilsDocker() {
+        var app = "postman_UTILS";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman UTILS");
+        setIdMapPropertyValue(app, "fgColor", "darkGrey");
+        setIdMapPropertyValue(app, "bgColor", "lightGrey");
+        setIdMapPropertyValue(app, "titleColor", "Orange");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer Utils Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/utils?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    utilsDocker();
+</script>
+
+<table id="utilsTable" class="installTable">
+    <tr>
+        <td>
+            <button id="utils_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this, id_home_fgColor, id_home_bgColor)">UTILS</button>
+        </td>
+    </tr>
+</table>

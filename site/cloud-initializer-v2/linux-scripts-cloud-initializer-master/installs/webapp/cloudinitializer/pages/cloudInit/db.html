@@ -1,0 +1,77 @@
+<script>
+    function initDB2() {
+        var app = "postman_DB2";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman dB2");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "red");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer dB2 Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/DB2?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+	}
+
+	function initMongoDb() {
+        var app = "postman_MONGODB";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman mongoDb");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "yellow");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer MongoDb Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/MongoDb?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+
+	function initMySQL() {
+        var app = "postman_MYSQL";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman mySQL");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "green");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer MySQL Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/mySQL?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+
+	function initOracle() {
+        var app = "postman_ORACLE";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman Oracle");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "lightGrey");
+        setIdMapPropertyValue(app, "titleColor", "blue");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer Oracle Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/Oracle?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    initDB2();
+    initMongoDb();
+    initMySQL();
+    initOracle();
+</script>
+
+<table id="dBTable" class="installTable">
+    <tr>
+        <td>
+            <button id="dB2_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">dB2</button>
+        </td>
+        <td>
+            <button id="mongoDB_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">mongoDB</button>
+        </td>
+        <td>
+            <button id="mySQL_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">mySQL</button>
+        </td>
+        <td>
+            <button id="oracle_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Oracle</button>
+        </td>
+    </tr>
+</table>

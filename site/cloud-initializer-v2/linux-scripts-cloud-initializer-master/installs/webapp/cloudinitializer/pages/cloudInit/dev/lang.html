@@ -1,0 +1,102 @@
+<script>
+    function initJava() {
+        var app = "postman_JAVA";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman Java");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "red");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer Java Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/Java?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    function initNodeJS() {
+        var app = "postman_NODEJS";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman nodeJS");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "yellow");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer NodeJS Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/NodeJS?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+
+    function initPerl() {
+        var app = "postman_PERL";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman Perl");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "green");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer Perl Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/Perl?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    function initCpp() {
+        var app = "postman_C++";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman C++");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "darkGrey");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer C++ Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/Cpp?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    function initPython() {
+        var app = "postman_PYTHON";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman Python");
+        setIdMapPropertyValue(app, "fgColor", "Brown");
+        setIdMapPropertyValue(app, "bgColor", "blue");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer C++ Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/Python?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    function initPHP() {
+        var app = "postman_PHP";
+        setIdMapPropertyValue(app, "buttonTitle", "Postman PHP");
+        setIdMapPropertyValue(app, "fgColor", "darkGrey");
+        setIdMapPropertyValue(app, "bgColor", "white");
+        setIdMapPropertyValue(app, "titleColor", "black");
+        setIdMapPropertyValue(app, "Title", "CLOUD Initializer PHP Installer");
+        setIdMapPropertyValue(app, "Method", "Get");
+        setIdMapPropertyValue(app, "URL", getURL("install/PHP?siteName=MyNewSite&port=9111&adminId=MyId&adminPWD=password&installDir=/var"));
+        setIdMapPropertyValue(app, "LeftColButton", "gui");
+    }
+
+    initJava();
+    initNodeJS();
+    initPerl();
+    initPython();
+    initCpp();
+    initPHP();
+</script>
+
+<table id="blogsTable" class="installTable">
+    <tr>
+        <td>
+            <button id="c++_BTN" class="install_BTN_postman" onclick="paintPostmanButtonSelection(this)">C++</button>
+        </td>
+        <td>
+            <button id="java_BTN" class="install_BTN_postman" onclick="paintPostmanButtonSelection(this)">Java</button>
+        </td>
+        <td>
+            <button id="python_BTN" class="install_BTN_postman"
+                onclick="paintPostmanButtonSelection(this)">Python</button>
+        </td>
+        <td>
+            <button id="perl_BTN" class="install_BTN_postman" onclick="paintPostmanButtonSelection(this)">Perl</button>
+        </td>
+        <td>
+            <button id="php_BTN" class="install_BTN_postman" onclick="paintPostmanButtonSelection(this)">PHP</button>
+        </td>
+    </tr>
+</table>

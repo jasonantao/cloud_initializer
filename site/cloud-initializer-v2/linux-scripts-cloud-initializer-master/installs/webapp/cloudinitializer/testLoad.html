@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").load("./dataLoad.html");
+            });
+        });
+
+        function load_home() {
+            document.getElementById("content").innerHTML = '<object type="type/html" data="./dataLoad.html" ></object>';
+            }
+        document.getElementById("content").innerHTML = '<object type="type/html" data="./dataLoad.html" ></object>';
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>Let jQuery AJAX Change This Text</h2>
+    </div>
+    <div id="content">
+        <h2>Content</h2>
+    </div>
+    <button>Get External Content</button>
+    <object type="type/html" data="./dataLoad.html" ></object>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").load("./dataLoad.html");
+            });
+        });
+
+        function load() {
+            alert("executing load");
+            document.getElementById("content").innerHTML = '<object type="type/html" data="./dataLoad.html" ></object>';
+            alert("executing load AGAIN");
+            document.getElementById("content").innerHTML = "ZZZ";
+            alert("executing load AGAIN 3rd. Time");
+            $("#content").load("./dataLoad.html");
+        }
+        load();
+    </script>
+</body>
+
+</html>

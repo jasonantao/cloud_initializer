@@ -1,0 +1,158 @@
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #4CAF50;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.installTable {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    height: 0px;
+    width: 0px;
+}
+
+.install_BTN_postman {
+    height: 32px;
+    width: 115px;
+
+    /*
+    background-color: #4CAF50; // Green
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+     */
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --marginTop: -126px;
+    --marginPadding: 126px;
+  }
+
+  /* Fonts */
+  .serif {
+    font-family: "Times New Roman", Times, serif;
+    color: red;
+  }
+
+  .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  H1 {
+    font-family: "Times New Roman", Times, serif;
+    color: orange;
+    font-size: 32px;
+    height: 35px;
+  }
+
+  tbody {
+    vertical-align: top;
+  }
+
+  table,
+  td,
+  tr {
+    border: 1px solid darkslategrey;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+  }
+
+  .padding5px {
+    padding: 5px;
+  }
+
+  .class_urlBarElement {
+    background-color: #ebebeb;
+    height: 28px;
+  }
+
+  .fixed {
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .dataBar {
+    height: 28px;
+  }
+
+  /*This just stops me getting horizontal scrolling if anything overflows the width*/
+  body {
+    overflow-x: hidden;
+  }
+
+  /*Just removing default browser padding/margin*/
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    /* color: #ebebeb; */
+  }
+
+  /*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
+  .Top {
+    background-color: green;
+    height: var(--marginPadding);
+  }
+
+  /*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
+  .Container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: var(--marginTop);
+    padding-top: var(--marginPadding);
+  }
+
+  /*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
+          WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
+          */
+
+  /*Entirely optional – just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
+  .scrolable::-webkit-scrollbar,
+
+  .scrolable {
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    border: 1px solid #c3c3c3;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+
+    white-space: pre;
+
+    background-color: #ebebeb;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    /**/
+    -ms-flex: 1;
+    flex: 1;
+
+    display: -webkit-flex;
+    -webkit-flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    /**/
+  }

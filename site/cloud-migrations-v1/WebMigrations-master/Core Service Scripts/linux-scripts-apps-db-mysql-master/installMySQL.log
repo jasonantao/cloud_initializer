@@ -1,0 +1,49 @@
+Loaded plugins: langpacks, priorities, update-motd
+Examining mysql80-community-release-el7-1.noarch.rpm: mysql80-community-release-el7-1.noarch
+mysql80-community-release-el7-1.noarch.rpm: does not update installed package.
+Nothing to do
+Loaded plugins: langpacks, priorities, update-motd
+11 packages excluded due to repository priority protections
+Resolving Dependencies
+--> Running transaction check
+---> Package mysql-community-server.x86_64 0:8.0.11-1.el7 will be installed
+--> Processing Dependency: mysql-community-client(x86-64) >= 8.0.0 for package: mysql-community-server-8.0.11-1.el7.x86_64
+--> Running transaction check
+---> Package mysql-community-client.x86_64 0:8.0.11-1.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                   Arch      Version         Repository            Size
+================================================================================
+Installing:
+ mysql-community-server    x86_64    8.0.11-1.el7    mysql80-community    341 M
+Installing for dependencies:
+ mysql-community-client    x86_64    8.0.11-1.el7    mysql80-community     26 M
+
+Transaction Summary
+================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 367 M
+Installed size: 1.6 G
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                               35 MB/s | 367 MB  00:10     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mysql-community-client-8.0.11-1.el7.x86_64                   1/2 
+  Installing : mysql-community-server-8.0.11-1.el7.x86_64                   2/2 
+  Verifying  : mysql-community-server-8.0.11-1.el7.x86_64                   1/2 
+  Verifying  : mysql-community-client-8.0.11-1.el7.x86_64                   2/2 
+
+Installed:
+  mysql-community-server.x86_64 0:8.0.11-1.el7                                  
+
+Dependency Installed:
+  mysql-community-client.x86_64 0:8.0.11-1.el7                                  
+
+Complete!

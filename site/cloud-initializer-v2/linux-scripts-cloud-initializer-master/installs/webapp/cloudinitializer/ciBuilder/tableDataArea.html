@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="./lib/css/ciBuilder.css">
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="./lib/js/ajaxRestCalls.js"></script>
+
+    <style>
+        H2 {
+            height: 1px;
+        }
+
+        tbody {
+            vertical-align: top;
+        }
+
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+            text-align: left;
+            height: 100%;
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        tr {
+            padding: 2px;
+            height: 1px;
+        }
+
+        .data {
+            height: 400px;
+        }
+
+        .dataBar {
+            height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tableData">
+        <tbody>
+            <tr>
+                <td style="width: 50%;">
+                    <table vertical-align: top; border: 1px solid black;>
+                        <tbody>
+                            <tr class="dataBar">
+                                <td>
+                                    <H2>JSON Body</H2>
+                                </td>
+                            </tr>
+                            <tr class="data">
+                                <td style="width: 100%;">
+                                    <div id="restRequestBody">{}</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr class="dataBar">
+                                <td>
+                                    <H2>Response</H2>
+                                </td>
+                            </tr>
+                            <tr class="data">
+                                <td>
+                                    <div id="restResponse">Response Data Area</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

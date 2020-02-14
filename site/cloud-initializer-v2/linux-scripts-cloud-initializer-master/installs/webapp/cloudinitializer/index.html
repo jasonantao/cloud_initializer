@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cloud Init</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./ciBuilder/lib/css/ciBuilder.css">
+
+	<link rel="stylesheet" href="./lib/css/menu.css">
+	<script src="./lib/js/jQuery/3.4.1.js"></script>
+	<script src="./lib/js/ci/menu.js"></script>
+	<script src="./ciBuilder/lib/js/properties.js"></script>
+	<script src="./ciBuilder/lib/js/ajaxRestCalls.js"></script>
+	<script src="./ciBuilder/lib/js/ciPostman.js"></script>
+	<!-- -->
+</head>
+
+<script>
+	// var loc = window.location.pathname;
+	// var dir = loc.substring(0, loc.lastIndexOf('/'))
+
+	var id_fgColor = "black";
+	var id_bgColor = "white";
+
+	var id_home_fgColor = id_fgColor;
+	var id_home_bgColor = "red";
+
+	var id_CI_fgColor = id_fgColor;
+	var id_CI_bgColor = "pink";
+
+	var id_postman_fgColor = id_fgColor;
+	var id_postman_bgColor = "green";
+
+	var id_about_fgColor = id_fgColor;
+	var id_about_bgColor = "yellow";
+
+	var id_contact_fgColor = id_fgColor;
+	var id_contact_bgColor = "orange";
+
+	function setObjColors(idName, fgColor, bgColor) {
+		setIdBtnColors(idName, fgColor, bgColor);
+		setIdDivColors(idName, fgColor, bgColor);
+	}
+
+	setObjColors("home", id_home_fgColor, id_home_bgColor);
+	setObjColors("CI", id_CI_fgColor, id_CI_bgColor);
+	setObjColors("postman", id_postman_fgColor, id_postman_bgColor);
+	setObjColors("contact", id_about_fgColor, id_about_bgColor);
+	setObjColors("about", id_contact_fgColor, id_contact_bgColor);
+	var initActiveMenu = "home_BTN";
+</script>
+
+<body onload="initMainMenu(initActiveMenu);">
+	<div class="main_MENU" id="topNav_DIV">
+		<button id="home_BTN" class="mainMenu_BTN" onclick="setMainMenuButtonSelection(this)">Home</button>
+		<button id="CI_BTN" class="mainMenu_BTN" onclick="setMainMenuButtonSelection(this)">Cloud initializer</button>
+		<button id="postman_BTN" class="mainMenu_BTN" onclick="setMainMenuButtonSelection(this)">Postman</button>
+		<button id="blog_BTN" class="mainMenu_BTN"
+		onclick="window.open('../cloudmigrations/')">Blog</button>
+		<!-- onclick="window.open('http://www.stockwidgets.com/cloudmigrations/')">Blog</button> -->
+		<button id="about_BTN" class="mainMenu_BTN" onclick="setMainMenuButtonSelection(this)">About</button>
+		<button id="contact_BTN" class="mainMenu_BTN" onclick="setMainMenuButtonSelection(this)">Contact</button>
+		<a href="javascript:void(0);" class="icon" onclick="showVerticleNavMenu('grey','black')">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
+	<div id="home_DIV" class="mainMenu_DIV">
+		<script> $("#home_DIV").load("./pages/home.html"); </script>
+	</div>
+
+	<div id="CI_DIV" class="mainMenu_DIV">
+		<script>
+			$("#CI_DIV").load("./pages/cloudInit.html"); 
+		</script>
+	</div>
+
+	<div id="about_DIV" class="mainMenu_DIV">
+		<!-- <h1>ABOUT CLOUD initializer</h1> -->
+		<script> $("#about_DIV").load("./pages/about.html"); </script>
+	</div>
+
+	<div id="contact_DIV" class="mainMenu_DIV">
+		<script> $("#contact_DIV").load("./pages/contact.html"); </script>
+	</div>
+
+	<div id="postman_DIV" class="mainMenu_DIV">
+		<script> $("#postman_DIV").load("./ciBuilder/ciPostman.html"); </script>
+	</div>
+
+	<!-- <script>
+		// initMenu(initActiveMenu)
+		// document.getElementById("home_BTN").click();
+	</script> -->
+</body>
+
+</html>
