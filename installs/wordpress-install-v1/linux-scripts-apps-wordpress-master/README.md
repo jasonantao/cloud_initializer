@@ -31,18 +31,6 @@ Read all copyright clauses and information before continuing to download and/or 
 - It is recommended to be installed on a test system in a test environment before promoting to a production environment.<img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/caution.png" width="6%" align= "right">
 <b>**INSTALL AT OWN RISK: END OF DISCLAIMER</b>
 
- - - - -
-### Repository Information <img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/repository.png" width="5%" align= "right">
-- https://github.com/RMelanson/linux-scripts-bootstraps.git
-
-<img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/aboutMickey.png" width="6%" align= "right">
-- Version: 1.0.0
-- Release Date: May 06 2018
-- Purpose: webBootstrap.sh is a simplified installation package for ...
-- Description: webBootstrap.sh is a  bootstrap utility for downloading and installing .... XXXXXXXXX.sh may be installed as a bootstrap or after the Linux system has been launched. 
-- The webBootstrap.sh is used to download ??????? from the git repository for ...
- - - - -
-
 
 ### Package Contents<img src="https://github.com/RMelanson/linux-scripts-bootstraps/blob/master/images/contents.png" width="6%" align= "right">
 
